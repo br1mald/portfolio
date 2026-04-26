@@ -1,0 +1,51 @@
+{% extends "layout.html" %} {% block body %}
+<div class="flex flex-col mx-auto text-base px-10 pb-16 md:max-w-5xl">
+    <h1 class="flex text-cyan-400 text-3xl py-5 md:pt-24 md:pb-16">
+        {% if content.language.lang == 'en' %} Projects {% else %} Projets {%
+        endif %}
+    </h1>
+    {% for project in projects %} {% if not loop.first %}
+    <hr class="border-gray-800 my-12" />
+    {% endif %}
+    <section
+        id="{{ project.id }}"
+        class="flex scroll-mt-36 flex-col py-16 gap-3"
+    >
+        <h1 class="flex text-2xl my-5">{{ project.title }}</h1>
+        <p>{{ project.long_desc }}</p>
+        <p>
+            <span class="font-bold text-cyan-500"
+                >{% if content.language.lang == "en" %} My part: {% else %} Ma
+                partie: {% endif %}
+            </span>
+            {{ project.my_part }}
+        </p>
+        <div class="flex text-mono text-gray-600 dark:text-gray-400 text-sm">
+            <span class="text-cyan-400">›</span> {{ project.tags[0] }} {% for
+            tag in project.tags[1:] %}
+            <span class="text-cyan-400 ml-4">›</span> {{ tag }} {% endfor %}
+        </div>
+        <div class="flex flex-row gap-2">
+            {% if project.github %}
+            <a
+                href="{{ project.github}}"
+                class="dark:text-gray-600 text-gray-400 border-b border-solid dark:border-gray-600 border-gray-400 hover:text-black hover:border-black dark:hover:text-white dark:hover:border-white"
+            >
+                Github
+            </a>
+            {% endif %} {% if project.github and project.demo %}
+            <p class="text-gray-600">.</p>
+            {% endif %} {% if project.demo %}
+            <a
+                href="{{ project.demo}}"
+                class="dark:text-gray-600 text-gray-400 border-b border-solid dark:border-gray-600 border-gray-400 hover:text-black hover:border-black dark:hover:text-white dark:hover:border-white"
+            >
+                Demo
+            </a>
+            {% endif %}
+        </div>
+    </section>
+    {% endfor %}
+</div>
+
+{% endblock %}

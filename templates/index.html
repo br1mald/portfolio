@@ -1,0 +1,135 @@
+{% extends "layout.html" %} {% block body %}
+<main class="flex-1">
+    <!--Hero -->
+    <section class="min-h-screen pb-24">
+        <div class="grid md:grid-cols-2 mx-3 mt-5 h-screen place-items-center">
+            <div class="flex flex-col w-full gap-2 p-2 justify-center">
+                <h1 class="text-2xl font-bold">
+                    {{ content.hero.greeting }}
+                    <span class="text-cyan-400">{{ content.hero.name }}</span>
+                </h1>
+                <p class="text-xl">{{ content.hero.subtitle }}</p>
+                <p class="text-gray-700 dark:text-white">
+                    {{ content.hero.bio }}
+                </p>
+                <div class="flex flex-row gap-2 text-gray-500">
+                    <a
+                        href="https://github.com/br1mald"
+                        class="font-bold border-b-2 border-gray-500 border-solid hover:text-black dark:hover:text-white hover:border-black dark:hover:border-white"
+                        >Github</a
+                    >
+                    <p class="font-bold text-lg">‧</p>
+                    <a
+                        href="https://www.linkedin.com/in/ibrahima-sory-diallo-97a145295"
+                        class="font-bold border-b-2 border-gray-500 border-solid hover:text-black dark:hover:text-white hover:border-black dark:hover:border-white"
+                        >LinkedIn</a
+                    >
+                </div>
+            </div>
+            <div class="flex flex-col overflow-hidden w-full rounded-xl">
+                <div class="flex flex-row bg-[#152231] text-[#828CA9] w-full">
+                    <div class="p-2 flex flex-1 gap-1 items-center">
+                        <span
+                            class="inline-block rounded-[50%] bg-red-600 w-3 h-3 m-0 p-0"
+                        ></span
+                        ><span
+                            class="inline-block rounded-[50%] bg-yellow-400 w-3 h-3 m-0 p-0"
+                        ></span
+                        ><span
+                            class="inline-block rounded-[50%] bg-green-600 w-3 h-3 m-0 p-0"
+                        ></span>
+                    </div>
+                    <h1
+                        class="flex justify-self-center self-center border-solid m-0 p-0"
+                    >
+                        ~/.portfolio
+                    </h1>
+                    <div class="flex-1"></div>
+                </div>
+                <div
+                    class="bg-[#0D1B2A] text-[#A8B2D2] border-t overflow-x-auto border-solid border-[#152231] px-2 py-2"
+                >
+                    <a
+                        href="{{ url_for('easter_egg') }}?lang={{ content.language.lang }}"
+                        class="hover:text-white"
+                    >
+                        <span class="text-cyan-400">$</span> curl
+                        https://ibrahima.dev/api/me <br />
+                    </a>
+                    { <br />
+                    <div class="px-4 text-white">
+                        {% for key, value in content.terminal.items() %}
+                        <span class="text-[#e6db74]"> "{{ key }}" </span>: {% if
+                        value is iterable and value is not string %} [{% for v
+                        in value %}<span class="">"{{ v }}"</span>{% if not
+                        loop.last %},{% endif %}{% endfor %}], <br />
+                        {% else %}
+                        <span class=""> "{{ value }}"</span>{% if not
+                        loop.last%},{% endif %}<br />
+                        {% endif %} {% endfor %}
+                    </div>
+                    } <br />
+                    <span class="text-cyan-400">$</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--About-->
+    <section
+        id="about"
+        class="flex flex-col content-center scroll-mt-36 min-h-screen justify-self-center self-center py-24 px-10"
+    >
+        <h1
+            class="flex text-cyan-400 self-center justify-self-center items-center mb-3 text-3xl"
+        >
+            {{ content.header.about }}
+        </h1>
+        <p class="mb-3">{{ content.about }}</p>
+        <div
+            class="font-mono flex flex-col md:flex-row text-sm text-gray-400 mb-16"
+        >
+            <div><span class="text-cyan-400">›</span> {{ content.tags.0 }}</div>
+            {% for tag in content.tags[1:] %}
+            <div><span class="text-cyan-400 md:ml-2">›</span> {{ tag }}</div>
+            {% endfor %}
+        </div>
+    </section>
+    <!--Projects-->
+    <section class="py-24 px-10 flex flex-col content-center min-h-screen">
+        <h1
+            class="flex text-cyan-400 self-center justify-self-center text-3xl px-10 py-5 mt-5"
+        >
+            {{ content.header.projects}}
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 md:px-10 gap-4 mt-5 mb-10">
+            {% for project in content.projects %}
+            <div
+                class="flex flex-col bg-gray-50 dark:bg-[#0a0a0a] border border-solid border-gray-200 dark:border-[#1a1a1a] [transition:border-color_0.3s_ease] hover:border-cyan-400 dark:hover:border-cyan-400 rounded-lg p-6 gap-2"
+            >
+                <p class="text-2xl">{{ project.title }}</p>
+                <p>{{ project.short_desc }}</p>
+                <div
+                    class="flex flex-col md:flex-row text-mono text-gray-400 text-sm"
+                >
+                    <div>
+                        <span class="text-cyan-400">›</span> {{ project.tags[0]
+                        }}
+                    </div>
+                    {% for tag in project.tags[1:] %}
+                    <div>
+                        <span class="text-cyan-400 md:ml-4">›</span> {{ tag }}
+                    </div>
+                    {% endfor %}
+                </div>
+                <a
+                    class="flex self-end hover:text-cyan-400"
+                    href="{{ url_for('project_page')}}?lang={{ content.language.lang }}#{{ project.id }}"
+                    >{% if content.language.lang == "en" %}View details -> {%
+                    else %}Plus de détails -> {% endif %}</a
+                >
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+{% endblock %}

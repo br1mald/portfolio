@@ -1,0 +1,87 @@
+{
+  "header": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "about": "À propos",
+    "contact": "Contacter"
+  },
+  "hero": {
+    "greeting": "Bonjour, Je m'appelle ",
+    "name": "Ibrahima",
+    "subtitle": "Développeur backend et étudiant en Génie Logiciel",
+    "bio": "Je construis des APIs, j'entraîne des modèles IA locaux et j'aime les architectures backend bien structurées. Actuellement étudiant en 2eme année à l'École Supérieure Polytechnique de Dakar."
+  },
+  "terminal": {
+    "name": "Ibrahima Sory Diallo",
+    "role": "Développeur Backend",
+    "school": "ESP Dakar - L2 Génie Logiciel",
+    "focus": ["Backend", "IA/ML"],
+    "stack": ["Python", "Rust", "JavaScript", "Java", "PHP"],
+    "tools": ["Flask", "FastAPI", "SQLAlchemy", "MLX"],
+    "languages": ["Français", "Anglais"],
+    "status": "Ouvert aux stages"
+  },
+  "language": {
+    "lang": "fr",
+    "other_lang": "en"
+  },
+  "about": "Je suis un étudiant en deuxième année de Génie Logiciel à l'École Supérieure Polytechnique de Dakar. Je me spécialise en développement backend: APIs, architecture de base de données, écrire du code robuste.\nDans les projets d'équipes j'ai tendance à prendre en charge le backend: création des routes, modèles de données, authentification, et déploiement de l'application.",
+  "tags": [
+    "TOEFL 110/120",
+    "2e Accessit Concours Général d'Anglais 2022",
+    "Mention Bien Baccalauréat 2023",
+    "Certification Huawei HCIA Datacom V1.0"
+  ],
+  "projects": [
+    {
+      "id": "msm",
+      "title": "MSM - Marketplace de Services Ménagers",
+      "short_desc": "Plateforme web permettant de mettre en relation des aides ménagères et des particuliers. Déployée avec Render.",
+      "long_desc": "Projet universitaire réalisé en binôme. L'application permet aux clients de rechercher du personnel ménager, de filtrer par type de service (ménage, repassage, etc.), disponibilité et note. Les deux parties vérifient leur identité à l'inscription. Déployée sur Render.",
+      "my_part": "J'ai pris en charge le backend : conception des routes, architecture de la base de données, modèles de données et authentification. J'ai ensuite déployé l'application sur Render.",
+      "tags": ["Python", "Flask", "SQLAlchemy", "Render"],
+      "github": "https://github.com/br1mald/MSM",
+      "demo": "https://msm-marketplace-de-services-menagers.onrender.com/"
+    },
+    {
+      "id": "mlx-fine-tune",
+      "title": "AI File Renamer - Fine-tuning LoRA",
+      "short_desc": "Fine-tuning d'un LLM local pour renommer des fichiers en fonction de leur contenu",
+      "long_desc": "Entraînement du modèle gemma-4-e4b-it-4bit (téléchargé depuis HuggingFace) avec des adaptateurs LoRA via MLX. Création d'un dataset synthétique de 57 exemples et 5 tests de validation. Le modèle est passé d'un échec systématique à une réussite consistante sur la tâche.",
+      "my_part": "Projet personnel : création du dataset, pipeline d'entraînement, évaluation",
+      "tags": ["MLX", "LoRA", "Python", "HuggingFace"],
+      "github": null,
+      "demo": null
+    },
+    {
+      "id": "php-news-site",
+      "title": "Site d'actualités en PHP",
+      "short_desc": "Application web de présentation d'articles d'actualités en PHP",
+      "long_desc": "Projet universitaire réalisé en équipe de 3. Plateforme d'actualités avec gestion des rôles (éditeur/admin), filtrage par catégorie et gestion complète des articles. Données persistées dans une base MySQL.",
+      "my_part": "J'ai développé l'API avec CRUD complet des utilisateurs, articles et catégories, sécurisé les routes par rôle, connecté la base MySQL via PDO, assuré la validation des données et la prévention XSS, et géré la consommation de l'API côté client en JavaScript.",
+      "tags": ["PHP", "JavaScript", "MySQL"],
+      "github": "https://github.com/br1mald/Projet-final-PHP",
+      "demo": null
+    },
+    {
+      "id": "java-biblio",
+      "title": "Système de gestion de bibliothèque en Java",
+      "short_desc": "Programme de gestion des activités d'une bibliothèque municipale en Java",
+      "long_desc": "Projet universitaire réalisé en équipe de 4. L'application permet le CRUD complet des livres, utilisateurs, livraisons, emprunts et véhicules. Données stockées dans une base MySQL via des objets DAO.",
+      "my_part": "J'ai écrit les classes Livre, Livraison et Annexe, connecté la base de données via JDBC, construit les classes DAO pour Livre et Annexe et conçu le scénario Main de test. J'ai aussi proposé le diagramme de classes UML suivi par l'équipe et rédigé le README.",
+      "tags": ["Java", "JDBC", "MySQL", "UML"],
+      "github": "https://github.com/br1mald/projet-biblio",
+      "demo": null
+    },
+    {
+      "id": "rust-autoclicker",
+      "title": "Outil d'automatisation multithreadé en Rust",
+      "short_desc": "Programme qui simule des clics et gère automatiquement l'alimentation dans Minecraft. Écrit en Rust.",
+      "long_desc": "Projet personnel réalisé pour apprendre Rust. Le programme simule des clics gauche à intervalle fixe et bascule automatiquement sur le slot de nourriture après un certain temps. Un thread séparé écoute un raccourci clavier pour arrêter l'exécution. Entièrement configurable via des constantes.",
+      "my_part": "Projet solo. J'ai implémenté toutes les fonctionnalités, rendu le programme configurable et rédigé un README détaillé sur GitHub.",
+      "tags": ["Rust"],
+      "github": "https://github.com/br1mald/minecraft-afk-clicker",
+      "demo": null
+    }
+  ]
+}

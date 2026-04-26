@@ -1,0 +1,87 @@
+{
+  "header": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm ",
+    "name": "Ibrahima",
+    "subtitle": "Backend developer and CS student",
+    "bio": "I build APIs, train AI models locally and care about clean backend architecture. Currently studying 2nd year at École Supérieure Polytechnique of Dakar."
+  },
+  "terminal": {
+    "name": "Ibrahima Sory Diallo",
+    "role": "Backend Developer",
+    "school": "ESP Dakar - L2 Software Eng.",
+    "focus": ["Backend", "AI/ML"],
+    "stack": ["Python", "Rust", "JavaScript", "Java", "PHP"],
+    "tools": ["Flask", "FastAPI", "SQLAlchemy", "MLX"],
+    "languages": ["French", "English"],
+    "status": "Open to internships"
+  },
+  "language": {
+    "lang": "en",
+    "other_lang": "fr"
+  },
+  "about": "I'm a second year Software Engineering student at École Supérieure Polytechnique of Dakar. I focus on backend development: building APIs, designing databases, writing robust code. Recently I've been exploring AI/ML, fine-tuning models and building tools around them.\nIn team projects I tend to gravitate towards the backend: routing, auth, data models and deployment.",
+  "tags": [
+    "TOEFL 110/120",
+    "5th Place — National English Competition (2022)",
+    "Baccalauréat - mention Bien (2023)",
+    "Huawei HCIA Datacom V1.0 Certification"
+  ],
+  "projects": [
+    {
+      "id": "msm",
+      "title": "MSM - Marketplace de Services Ménagers",
+      "short_desc": "Web application to connect cleaning personnel and clients. Deployed through Render",
+      "long_desc": "This application was built as a uni project in a team of 2. It allows for clients to find cleaning personnel, filter by service type (cleaning the house, ironing clothes, etc), schedule, and rating. Both parties verify identity on signup for safety purposes. Deployed on Render",
+      "my_part": "I was in charge of the backend, so I designed the routes, database architecture, data models and auth. I later deployed it through Render",
+      "tags": ["Python", "Flask", "SQLAlchemy", "Render"],
+      "github": "https://github.com/br1mald/MSM",
+      "demo": "https://msm-marketplace-de-services-menagers.onrender.com/"
+    },
+    {
+      "id": "mlx-fine-tune",
+      "title": "AI File Renamer - LoRA Fine-tuning",
+      "short_desc": "Fine-tuned a local LLM to rename files based on their content",
+      "long_desc": "Trained gemma-4-e4b-it-4bit (downloaded from HuggingFace) with LoRA adapters through MLX. Built a synthetic dataset of 57 examples with 5 validation tests. After training, the model went from failing the task to succeeding consistently",
+      "my_part": "Solo project: dataset creation, training pipeline, evaluation",
+      "tags": ["MLX", "LoRA", "Python", "HuggingFace"],
+      "github": null,
+      "demo": null
+    },
+    {
+      "id": "php-news-site",
+      "title": "PHP News Website",
+      "short_desc": "Web application to present news articles built in PHP",
+      "long_desc": "This application was a uni project made with a team of 3. It's a news platform with role-based access (editor/admin), category filtering and full article management. Everything is persisted in a MySQL database.",
+      "my_part": "I built the API that allows full CRUD of users, articles and categories, secured the routes (only allowing access to certain routes if the user has the right role), connected the MySQL database with PDO, ensured data validation, XSS prevention and proper consumption of the API by the client-side JavaScript.",
+      "tags": ["PHP", "JavaScript", "MySQL"],
+      "github": "https://github.com/br1mald/Projet-final-PHP",
+      "demo": null
+    },
+    {
+      "id": "java-biblio",
+      "title": "Java Library Management project",
+      "short_desc": "Program that manages a library's activities written in Java",
+      "long_desc": "Uni project built in a team of 4. It allows for full CRUD of books, users, deliveries, borrowing, vehicles, etc. Everything is stored in a MySQL database through DAO objects",
+      "my_part": "I wrote the Livre, Livraison and Annexe classes, connected the database through JDBC, built the DAO classes for Livre and Annexe and designed the Main scenario to test the classes. I also proposed the UML class diagram that we followed to create the different classes and wrote the README.md to describe the project.",
+      "tags": ["Java", "JDBC", "MySQL", "UML"],
+      "github": "https://github.com/br1mald/projet-biblio",
+      "demo": null
+    },
+    {
+      "id": "rust-autoclicker",
+      "title": "Multithreaded automation tool in Rust",
+      "short_desc": "Program that simulates mouse clicks and takes care of eating automatically in Minecraft. Written in Rust.",
+      "long_desc": "This is a personal project I worked on to learn how to code in Rust. It simulates left clicks at a fixed interval and automatically switches slots to eat after some time has passed. It listens on a different thread for a keyboard shortcut to stop running. Everything is configurable through modifying constants.",
+      "my_part": "This is a solo project. I implemented every functionality, made it configurable and wrote a detailed README.md for it on GitHub.",
+      "tags": ["Rust"],
+      "github": "https://github.com/br1mald/minecraft-afk-clicker",
+      "demo": null
+    }
+  ]
+}
