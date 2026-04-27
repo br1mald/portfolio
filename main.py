@@ -57,6 +57,7 @@ def project_page(request: Request, lang: str = "en"):
         context={"content": content, "projects": projects, "active_page": "project_page"},
     )
 
+@app.head("/health")
 @app.get("/health")
 async def health():
     return {"status": "ok"}
