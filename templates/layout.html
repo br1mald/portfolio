@@ -148,7 +148,7 @@
             </div>
         </nav>
         <nav
-            class="flex z-20 px-2 md:hidden border-b border-solid border-black dark:border-white items-center justify-between py-4"
+            class="flex z-20 sticky bg-white dark:bg-black top-0 px-2 md:hidden border-b border-solid border-black dark:border-white items-center justify-between py-4"
         >
             <button id="sidebar-button">
                 <svg
@@ -172,7 +172,7 @@
             <div>
                 <a
                     class="text-cyan-400"
-                    href="{{ url_for('home') }}?lang={{ content.language.other_lang }}"
+                    href="{{ url_for(active_page) }}?lang={{ content.language.other_lang }}"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
