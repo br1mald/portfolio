@@ -16,7 +16,7 @@
     "role": "Développeur Backend",
     "school": "ESP Dakar - L2 Génie Logiciel",
     "focus": ["Backend", "IA/ML"],
-    "stack": ["Python", "Rust", "JavaScript", "Java", "PHP"],
+    "stack": ["Python", "Rust", "JavaScript", "Java", "PHP", "C"],
     "tools": ["Flask", "FastAPI", "SQLAlchemy", "MLX"],
     "languages": ["Français", "Anglais"],
     "status": "Ouvert aux stages"
@@ -81,6 +81,16 @@
       "my_part": "Projet solo. J'ai implémenté toutes les fonctionnalités, rendu le programme configurable et rédigé un README détaillé sur GitHub.",
       "tags": ["Rust"],
       "github": "https://github.com/br1mald/minecraft-afk-clicker",
+      "demo": null
+    },
+    {
+      "id": "c-grade-manager",
+      "title": "Programme de gestion de notes en C",
+      "short_desc": "Programme CLI pour gérer des classes, étudiants, matières et notes. Écrit en C avec parsing CSV",
+      "long_desc": "Projet universitaire réalisé en équipe de 4. Application CLI modulaire permettant de gérer les classes, matières, étudiants et notes d'une école. Les données sont persistées via parsing de fichiers CSV et le projet est divisé en modules séparés par domaine",
+      "my_part": "J'ai développé le module de gestion des classes et la logique de parsing CSV. J'ai aussi maintenu le repo GitHub, testé toutes les fonctionnalités et réalisé la vidéo de démonstration",
+      "tags": ["C", "CSV", "Git"],
+      "github": "https://github.com/br1mald/Projet_C_2025",
       "demo": null
     }
   ]

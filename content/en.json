@@ -16,7 +16,7 @@
     "role": "Backend Developer",
     "school": "ESP Dakar - L2 Software Eng.",
     "focus": ["Backend", "AI/ML"],
-    "stack": ["Python", "Rust", "JavaScript", "Java", "PHP"],
+    "stack": ["Python", "Rust", "JavaScript", "Java", "PHP", "C"],
     "tools": ["Flask", "FastAPI", "SQLAlchemy", "MLX"],
     "languages": ["French", "English"],
     "status": "Open to internships"
@@ -81,6 +81,16 @@
       "my_part": "This is a solo project. I implemented every functionality, made it configurable and wrote a detailed README.md for it on GitHub.",
       "tags": ["Rust"],
       "github": "https://github.com/br1mald/minecraft-afk-clicker",
+      "demo": null
+    },
+    {
+      "id": "c-grade-manager",
+      "title": "Grade Management System in C",
+      "short_desc": "CLI program to manage classes, students, subjects and grades. Built in C with CSV parsing",
+      "long_desc": "Uni project built in a team of 4. A modular CLI application for managing a school's classes, subjects, students and grades. Data is persisted through CSV file parsing and the project is split into separate modules for each domain",
+      "my_part": "I built the class management module and CSV parsing logic. I also maintained the GitHub repo, tested all features and recorded the demo video",
+      "tags": ["C", "CSV", "Git"],
+      "github": "https://github.com/br1mald/Projet_C_2025",
       "demo": null
     }
   ]
