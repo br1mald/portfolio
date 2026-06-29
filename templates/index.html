@@ -104,7 +104,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 md:px-10 gap-4 mt-5 mb-10">
             {% for project in content.projects %}
             <div
-                class="flex flex-col bg-gray-50 dark:bg-[#0a0a0a] border border-solid border-gray-200 dark:border-[#1a1a1a] [transition:border-color_0.3s_ease] hover:border-cyan-400 dark:hover:border-cyan-400 rounded-lg p-6 gap-2"
+                class="flex flex-col h-full bg-gray-50 dark:bg-[#0a0a0a] border border-solid border-gray-200 dark:border-[#1a1a1a] [transition:border-color_0.3s_ease] hover:border-cyan-400 dark:hover:border-cyan-400 rounded-lg p-6 gap-2"
             >
                 <p class="text-2xl">{{ project.title }}</p>
                 <p>{{ project.short_desc }}</p>
@@ -122,7 +122,7 @@
                     {% endfor %}
                 </div>
                 <a
-                    class="flex self-end hover:text-cyan-400"
+                    class="flex mt-auto self-end hover:text-cyan-400"
                     href="{{ url_for('project_page')}}?lang={{ content.language.lang }}#{{ project.id }}"
                     >{% if content.language.lang == "en" %}View details -> {%
                     else %}Plus de détails -> {% endif %}</a

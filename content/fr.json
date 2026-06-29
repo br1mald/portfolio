@@ -17,7 +17,7 @@
     "school": "ESP Dakar - L2 Génie Logiciel",
     "focus": ["Backend", "IA/ML"],
     "stack": ["Python", "Rust", "JavaScript", "Java", "PHP", "C"],
-    "tools": ["Flask", "FastAPI", "SQLAlchemy", "MLX"],
+    "tools": ["Flask", "FastAPI", "SQLAlchemy", "MLX", "Docker"],
     "languages": ["Français", "Anglais"],
     "status": "Ouvert aux stages"
   },
@@ -34,6 +34,16 @@
   ],
   "projects": [
     {
+      "id": "sensante",
+      "title": "SénSanté - Assistant de pré-diagnostic médical",
+      "short_desc": "Application web de pré-diagnostic médical adaptée au Sénégal. Déployée sur HuggingFace Spaces.",
+      "long_desc": "Projet universitaire. Application web de pré-diagnostic médical conçue pour le contexte sénégalais. J'ai entraîné un classifieur RandomForest (scikit-learn) pour prédire les pathologies probables à partir des symptômes, et un LLM (Llama 3 via Groq) transforme la prédiction en une explication en langage clair. Frontend responsive en Tailwind, conteneurisé avec Docker et déployé sur HuggingFace Spaces.",
+      "my_part": "J'ai entraîné le classifieur RandomForest, développé l'API REST FastAPI exposant le modèle, intégré la couche d'explication par LLM, conçu le frontend responsive en Tailwind, puis conteneurisé et déployé l'application avec Docker.",
+      "tags": ["Python", "FastAPI", "scikit-learn", "Docker", "Tailwind"],
+      "github": "https://github.com/br1mald/sensante",
+      "demo": "https://huggingface.co/spaces/Brimald/sensante"
+    },
+    {
       "id": "msm",
       "title": "MSM - Marketplace de Services Ménagers",
       "short_desc": "Plateforme web permettant de mettre en relation des aides ménagères et des particuliers. Déployée avec Render.",
@@ -41,7 +51,7 @@
       "my_part": "J'ai pris en charge le backend : conception des routes, architecture de la base de données, modèles de données et authentification. J'ai ensuite déployé l'application sur Render.",
       "tags": ["Python", "Flask", "SQLAlchemy", "Render"],
       "github": "https://github.com/br1mald/MSM",
-      "demo": "https://msm-marketplace-de-services-menagers.onrender.com/"
+      "demo": "https://marketplace-de-services-menagers-msm.onrender.com/"
     },
     {
       "id": "mlx-fine-tune",
@@ -51,6 +61,16 @@
       "my_part": "Projet personnel : création du dataset, pipeline d'entraînement, évaluation",
       "tags": ["MLX", "LoRA", "Python", "HuggingFace"],
       "github": null,
+      "demo": null
+    },
+    {
+      "id": "club-sportif",
+      "title": "Gestion de club sportif (Flask + MySQL)",
+      "short_desc": "Plateforme de gestion d'un club multi-sports : membres, équipes, entraînements, présences, cotisations et compétitions.",
+      "long_desc": "Projet universitaire réalisé en binôme. La plateforme gère un club multi-sports de bout en bout : membres, équipes, entraînements, présences, cotisations et compétitions. Elle applique de vraies règles métier et calcule des métriques directement en SQL.",
+      "my_part": "J'ai développé le backend Flask en blueprints avec des requêtes SQL paramétrées. J'ai implémenté les règles métier (âge minimum pour les équipes senior, unicité d'équipe par sport, historisation des transferts via dates d'entrée/sortie) et des métriques calculées en SQL comme le taux d'assiduité.",
+      "tags": ["Python", "Flask", "MySQL", "SQL"],
+      "github": "https://github.com/br1mald/club-sportif",
       "demo": null
     },
     {
@@ -81,6 +101,26 @@
       "my_part": "Projet solo. J'ai implémenté toutes les fonctionnalités, rendu le programme configurable et rédigé un README détaillé sur GitHub.",
       "tags": ["Rust"],
       "github": "https://github.com/br1mald/minecraft-afk-clicker",
+      "demo": null
+    },
+    {
+      "id": "sentransport",
+      "title": "SenTransport - Carte de transport interactive",
+      "short_desc": "Carte de transport en commun interactive avec arrêts et géolocalisation. Frontend React sur une API Flask.",
+      "long_desc": "Projet académique associant un frontend React à une API Flask. Une carte Leaflet affiche les arrêts de transport et la géolocalisation de l'utilisateur, avec des données servies par le backend.",
+      "my_part": "J'ai travaillé sur toute la stack : développement de l'API Flask et de ses endpoints, mise en place de la protection CORS, et développement du frontend React consommant l'API ainsi que l'intégration de la carte Leaflet (affichage des arrêts et géolocalisation).",
+      "tags": ["React", "Flask", "Leaflet", "JavaScript"],
+      "github": "https://github.com/br1mald/sentransport",
+      "demo": null
+    },
+    {
+      "id": "android-notes",
+      "title": "Gestionnaire de notes mobile (Android/Java)",
+      "short_desc": "Application Android de gestion de notes avec persistance locale Room. Écrite en Java.",
+      "long_desc": "Application Android de gestion de notes réalisée en équipe de 6, avec persistance locale via Room. Les notes sont créées, modifiées et stockées sur l'appareil.",
+      "my_part": "J'ai pris en charge l'architecture et la couche de données (entité/DAO/repository Room), construit l'adaptateur RecyclerView partagé avec gestion du double-tap, et géré l'intégration Git de l'équipe.",
+      "tags": ["Java", "Android", "Room"],
+      "github": "https://github.com/br1mald/gestionnaire-de-notes-android",
       "demo": null
     },
     {
